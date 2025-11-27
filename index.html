@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BitaBox Technology</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&family=Rethink+Sans:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="global.css">
+
+  <style>
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+      overflow: hidden;
+      color: white;
+    }
+
+    .hero-container {
+      position: relative;
+      width: 100%;
+      max-width: 1728px;
+      aspect-ratio: 1728 / 1117;
+    }
+
+    /* Video Background */
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Optional overlay gradient on video */
+    .looper-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at bottom, rgba(255, 28, 247, 0.15) 0%, rgba(0, 240, 255, 0.1) 50%, transparent 70%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 22%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 686px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 2; /* above video and overlay */
+    }
+
+    .main-title {
+      font-family: 'Rethink Sans', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1.3;
+      letter-spacing: 1.6px;
+      background: linear-gradient(124deg, #ff1cf7 0%, #00f0ff 120.7%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-family: 'Rethink Sans', sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.5rem, 3vw, 3rem);
+      line-height: 1.3;
+      letter-spacing: 0.96px;
+      color: #ffffff;
+      margin: 12px 0 0 0;
+    }
+
+    .description {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 200;
+      font-size: clamp(1rem, 1.2vw, 1.25rem);
+      line-height: 1.65;
+      letter-spacing: 0.72px;
+      color: #ffffff;
+      margin: 37px 0 0 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 1rem;
+      }
+
+      .hero-content {
+        top: 18%;
+        max-width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg" style="background-color: #000;">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-white" href="./index.html">BitaBox Technology</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active text-white" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./about/about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./services/services.html">Our Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./contact/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+
+      <!-- Video Background -->
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="../bita website/home/tech.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Overlay Gradient -->
+      <div class="looper-bg"></div>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <h1 class="main-title">BitaBox Technology</h1>
+        <h2 class="subtitle">Success.Speed.Solution</h2>
+        <p class="description">
+          Bitabox Technologies is a passionate and people-driven tech company focused on creating smart, reliable, and easy-to-use digital solutions. As a young and energetic team, we believe in combining creativity with technology to help businesses grow, solve real problems, and build a strong digital presence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

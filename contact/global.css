@@ -1,0 +1,23 @@
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* stays behind content */
+}
+
+.contact-card {
+    background-color: #050505;
+    border-radius: 10px; /* keeps slightly rounded corners */
+    box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.03);
+    width: 400px;      /* fixed width */
+    height: 400px;     /* fixed height to make it square */
+    padding: 40px;     /* adjust padding to fit content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertically center content */
+    align-items: center;      /* horizontally center content */
+    text-align: center;       /* optional for text inside */
+}
